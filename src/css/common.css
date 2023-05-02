@@ -16,3 +16,19 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/*  + task 02 */
+.timer {
+  display: flex;
+  gap: 10px;
+}
+
+.timer .field {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer .value {
+  font-size: 40px;
+}
+/*  - task 02 */
