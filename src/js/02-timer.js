@@ -63,7 +63,7 @@ function startTime(selectTime) {
     if (currentDate <= 0) {
         //stop a timer
         clearInterval(timerID);
-        renderTimer({ days: 00, hours: 00, minutes: 00, seconds: 00 })
+        renderTimer({ days: "00", hours: "00", minutes: "00", seconds: "00" })
         refs.btnStart.disabled = true;
         refs.inputDate.disabled = false;
         return;
