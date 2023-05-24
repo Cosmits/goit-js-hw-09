@@ -46,7 +46,6 @@ refs.btnStart.addEventListener('click', onClickStart)
 const objFlatpickr = flatpickr(refs.inputDate, optionsFlatpickr);
 
 //================================================================
-
 function onClickStart() {
 
     refs.btnStart.disabled = true;
@@ -56,6 +55,7 @@ function onClickStart() {
     timerID = setInterval(startTime, 1000, selectTime,);
 }
 
+//================================================================
 function startTime(selectTime) {
 
     let currentDate = selectTime - new Date().getTime();
@@ -73,7 +73,7 @@ function startTime(selectTime) {
     renderTimer(objTimer)
 }
 
-
+//================================================================
 function renderTimer(objTimer) {
     refs.dataDaysEl.innerText = String(objTimer.days).padStart(2, 0);
     refs.dataHoursEl.innerText = String(objTimer.hours).padStart(2, 0);
@@ -81,6 +81,7 @@ function renderTimer(objTimer) {
     refs.dataSecondsEl.innerText = String(objTimer.seconds).padStart(2, 0);
 }
 
+//================================================================
 function convertMs(ms) {
     // Number of milliseconds per unit of time
     const second = 1000;

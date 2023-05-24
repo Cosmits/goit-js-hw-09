@@ -11,9 +11,9 @@ refs.btnStart.style.fontSize = "30px";
 refs.btnStop.style.fontSize = "30px";
 refs.btnStart.style.padding = "15px";
 refs.btnStop.style.padding = "15px";
-//css
-
 refs.btnStop.disabled = true;
+
+//Listeners
 refs.btnStart.addEventListener('click', startChangeColor);
 refs.btnStop.addEventListener('click', stopChangeColor);
 
@@ -24,6 +24,7 @@ function getRandomHexColor() {
         .padStart(6, 0)}`;
 }
 
+//================================================================
 function startChangeColor() {
     intervalID = setInterval(changeBodyColor, 1000);
 
@@ -31,6 +32,7 @@ function startChangeColor() {
     refs.btnStop.disabled = false;
 }
 
+//================================================================
 function stopChangeColor() {
     clearTimeout(intervalID);
 
@@ -38,6 +40,7 @@ function stopChangeColor() {
     refs.btnStop.disabled = true;
 }
 
+//================================================================
 function changeBodyColor() {
     document.body.style.backgroundColor = getRandomHexColor();
 }

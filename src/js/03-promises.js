@@ -9,9 +9,7 @@ const refs = {
 
 refs.submitBtnEl.addEventListener('click', onCreatePromiseBtn);
 
-
 //================================================================
-
 function createPromise(position, delay, step) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
@@ -27,6 +25,7 @@ function createPromise(position, delay, step) {
   });
 };
 
+//================================================================
 function onCreatePromiseBtn(event) {
   event.preventDefault();
 
